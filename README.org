@@ -26,7 +26,7 @@ From [[http://superuser.com/questions/809150/how-to-make-scutil-login-to-vpn-wit
   scutil --nc list 
   
   Available network connection services in the current set (*=enabled):
-  * (Disconnected)   5022DD2F-5A7C-42C4-BE3F-48566BFA265F IPSec              "VPN (Cisco IPSec)"              [IPSec]
+  * (Disconnected)   5022EE2F-3A7C-42C4-B33F-48566BFA265F IPSec              "VPN (Cisco IPSec)"              [IPSec]
 #+END_SRC
 
 #+BEGIN_EXAMPLE
