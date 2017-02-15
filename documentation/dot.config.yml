@@ -1,4 +1,5 @@
 credentials:
+  servicename: "vpn name"
   username: vpn_username
   password: PASssWORD
   
