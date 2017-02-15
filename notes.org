@@ -1,0 +1,44 @@
+
+* Mac specific: scutil
+From [[http://superuser.com/questions/809150/how-to-make-scutil-login-to-vpn-with-password-on-mac][this Superuser link]]
+#+BEGIN_SRC bash
+
+  scutil --nc start "$VPNName"
+
+  sleep 2.7
+  osascript -e "tell application \"System Events\" to keystroke \"$PASSWORD\""
+  osascript -e "tell application \"System Events\" to keystroke return"
+  sleep 2
+
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+
+	start <service> [--user user] [--password password] [--secret secret]
+		Start a given service. Can take optional arguments for user, password, and secret
+
+	stop <service>
+		Stop a given service
+
+#+END_EXAMPLE
+
+#+BEGIN_SRC bash
+  scutil --nc list 
+  
+  Available network connection services in the current set (*=enabled):
+  * (Disconnected)   5022DD2F-5A7C-42C4-BE3F-48566BFA265F IPSec              "VPN (Cisco IPSec)"              [IPSec]
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+  930  scutil --help
+  931  scutil --nc status
+  932  scutil --nc list
+  933  scutil --nc status class FeedTask(Task):
+  939  scutil --nc
+  940  scutil --nc help
+  941  scutil --nc stop "VPN (Cisco IPSec)"
+  942  scutil --nc start "VPN (Cisco IPSec)" 
+  947  scutil --nc status "VPN (Cisco IPSec)"
+  962  history |grep scutil
+  963  history |grep scutil > notes.org
+#+END_EXAMPLE
