@@ -10,4 +10,5 @@ depends: $(VENV)
 	$(PIP) install circus PyYAML
 
 
-
+run: depends
+	$(PYTHON) ./vpn_watchdog/woof.py
