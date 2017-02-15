@@ -7,7 +7,7 @@ $(VENV):
 	$(PIP) install -U pip
 
 depends: $(VENV)
-	$(PIP) install circus
+	$(PIP) install circus PyYAML
 
 
 
